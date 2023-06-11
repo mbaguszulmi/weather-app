@@ -1,0 +1,47 @@
+name: flutter_backend
+description: A new Flutter plugin project.
+version: 0.0.1
+homepage:
+publish_to: none
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+  flutter: ">=3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  cupertino_icons: ^1.0.2
+  flutter_base:
+    path: ../flutter_base
+  bloc: ^8.0.3
+  equatable: ^2.0.3
+  flutter_bloc: ^8.0.1
+  get_it: ^7.2.0
+  dio: ^5.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: co.mbznetwork.flutter.flutter_backend
+        pluginClass: FlutterBackendPlugin
+      ios:
+        pluginClass: FlutterBackendPlugin
+      linux:
+        pluginClass: FlutterBackendPlugin
+      macos:
+        pluginClass: FlutterBackendPlugin
+      windows:
+        pluginClass: FlutterBackendPluginCApi
+      web:
+        pluginClass: FlutterBackendWeb
+        fileName: flutter_backend_web.dart
